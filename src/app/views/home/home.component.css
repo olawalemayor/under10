@@ -1,0 +1,42 @@
+.big-img img {
+  width: 100%;
+}
+
+.carousel-caption {
+  bottom: 4rem;
+}
+
+.cards {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card-links {
+  cursor: pointer;
+}
+
+.card-links:hover {
+  background-color: var(--primaryCol);
+  color: var(--bodyCol);
+}
+
+.card-links h3,
+.card-links p {
+  color: inherit;
+  background-color: inherit;
+}
+
+.carousel-indicators {
+  background-color: unset;
+}
+
+.carousel-caption,
+.carousel-caption > h3,
+.carousel-caption > p {
+  font-weight: bolder;
+  letter-spacing: 0.3rem;
+  color: var(--textCol);
+}
+
+@media (min-width: 768px) {
+}

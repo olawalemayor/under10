@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: var(--bodyFont);
+  color: var(--textCol);
+  background-color: var(--bodyCol);
+}
+
+:root {
+  --primaryCol: #ff0000;
+  --secondaryCol: #0000ff;
+  --bodyCol: aliceblue;
+  --textCol: rgb(22, 21, 21);
+  --bodyFont: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  --textFont: 14px;
+  --heading: 18px;
+  --bigHeading: 24px;
+}

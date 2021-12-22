@@ -9,10 +9,12 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   cards: string[][] = [
-    ['UDEMY', 'Cheap courses from Udemy'],
-    ['PLURALSIGHT', 'Cheap courses from Pluralsight'],
-    ['UDACITY', 'Cheap courses from Udacity'],
+    ['UDEMY', 'Cheap courses from Udemy', 'udemy'],
+    ['PLURALSIGHT', 'Cheap courses from Pluralsight', 'pluralsight'],
+    ['UDACITY', 'Cheap courses from Udacity', 'udacity'],
   ];
+
+  courseRoute() {}
 
   ngOnInit(): void {}
 }

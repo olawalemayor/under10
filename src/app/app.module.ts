@@ -9,6 +9,7 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
 import { UdemyComponent } from './views/udemy/udemy.component';
 import { RouterModule } from '@angular/router';
 import { NoCourseComponent } from './views/no-course/no-course.component';
+import { BrandLogoComponent } from './common/brand-logo/brand-logo.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NoCourseComponent } from './views/no-course/no-course.component';
     AppFooterComponent,
     UdemyComponent,
     NoCourseComponent,
+    BrandLogoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],

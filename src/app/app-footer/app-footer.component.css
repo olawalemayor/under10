@@ -1,0 +1,49 @@
+* {
+  color: unset;
+  background-color: unset;
+}
+
+footer {
+  background-color: black;
+  padding: 0.3rem 0;
+  color: var(--bodyCol);
+}
+.footer {
+  background-color: unset;
+}
+.logo {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--bodyCol);
+}
+
+.brand p {
+  font-size: small;
+  color: rgb(214, 216, 218);
+  font-style: italic;
+}
+
+h5 {
+  color: var(--primaryCol);
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer .links a:hover {
+  color: var(--primaryCol);
+}
+
+@media (max-width: 576px) {
+  h5,
+  .links {
+    text-align: center;
+  }
+  .links {
+    padding-bottom: 1rem;
+  }
+  .links > li {
+    list-style: none;
+  }
+}

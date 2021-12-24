@@ -1,8 +1,22 @@
 header {
   background-color: var(--bodyCol);
-  position: sticky;
   z-index: 9999;
   top: 0;
+}
+
+.scroll-header {
+  box-shadow: 0 1px 10px 1px;
+  position: sticky !important;
+  animation: slide-header 1.2s;
+}
+
+@keyframes slide-header {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
 }
 #header {
   display: flex;
@@ -10,16 +24,6 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 1rem 0;
-  animation: ease-in-out 0.5s;
-}
-
-#logo {
-  font-size: var(--bigHeading);
-}
-
-#logo > span {
-  color: var(--primaryCol);
-  font-style: italic;
 }
 
 .navigations {

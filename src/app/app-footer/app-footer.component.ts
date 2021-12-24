@@ -8,5 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class AppFooterComponent implements OnInit {
   constructor() {}
 
+  links: string[][] = [
+    ['Udemy', 'udemy'],
+    ['Pluralsight', 'pluralsight'],
+    ['Udacity', 'udacity'],
+  ];
+
+  resources: string[][] = [
+    ['Google', 'https://www.google.com'],
+    ['DevDocs', 'https://devdocs.io'],
+    ['GitHub', 'https://github.io'],
+  ];
+
   ngOnInit(): void {}
 }

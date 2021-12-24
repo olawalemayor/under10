@@ -14,5 +14,15 @@ export class AppHeaderComponent implements OnInit {
       let mobileNav = document.getElementById('mobile-header');
       mobileNav?.classList.toggle('show-menu');
     });
+
+    window.addEventListener('scroll', () => {
+      let header = document.querySelector('header') as HTMLHeadElement;
+      let headerHeight: number = header.offsetHeight;
+      if (window.scrollY > headerHeight) {
+        header.classList.add('scroll-header');
+      } else {
+        header.classList.remove('scroll-header');
+      }
+    });
   }
 }

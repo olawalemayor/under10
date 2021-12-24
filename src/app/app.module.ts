@@ -10,6 +10,7 @@ import { UdemyComponent } from './views/udemy/udemy.component';
 import { RouterModule } from '@angular/router';
 import { NoCourseComponent } from './views/no-course/no-course.component';
 import { BrandLogoComponent } from './common/brand-logo/brand-logo.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { BrandLogoComponent } from './common/brand-logo/brand-logo.component';
     NoCourseComponent,
     BrandLogoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule],
+  imports: [BrowserModule, AppRoutingModule, RouterModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

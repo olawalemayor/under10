@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../../common/course.service';
-import { Course } from '../../shared/udemy/course';
+import { UdemyResponse } from '../../shared/udemy/course';
 
 @Component({
   selector: 'app-udemy',
@@ -10,11 +10,18 @@ import { Course } from '../../shared/udemy/course';
 export class UdemyComponent implements OnInit {
   constructor(private courseService: CourseService) {}
 
-  courses: Course[] = [];
+  response: UdemyResponse = {
+    count:0,
+    next: '',
+    previous: '',
+    results: []
+  }
 
   ngOnInit(): void {
     this.courseService._getCourse().subscribe((courses) => {
-      this.courses = courses;
+      this.response = courses;
+
+      console.log(this.response)
     });
   }
 }

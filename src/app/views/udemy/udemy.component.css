@@ -1,0 +1,25 @@
+.table-heading {
+  font-weight: bolder;
+}
+
+.course-list div,
+.course-list a {
+  color: unset;
+  background-color: unset;
+}
+
+.course-list {
+  padding: 1rem;
+  color: var(--bodyCol);
+  background-color: var(--textCol);
+  border: 2px solid;
+  margin-bottom: 1rem;
+}
+
+.course-list:hover {
+  background-color: rgb(43, 42, 42);
+}
+
+.course-list a {
+  text-decoration: none;
+}

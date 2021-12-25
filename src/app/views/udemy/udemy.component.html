@@ -1,1 +1,21 @@
-<p>{{ courses[0] }}</p>
+<h2 class="display-2 text-center mb-0">UDEMY</h2>
+<div>
+  <div class="preview container">
+    <div class="row py-3 table-heading">
+      <div class="col-6">Course</div>
+      <div class="col-6">Price</div>
+    </div>
+    <div class="row pb-2 course-list" *ngFor="let course of response.results">
+      <div class="col-6">
+        <a [href]="'http://udemy.com' + course.url">
+          <img
+            [src]="course.image_125_H"
+            [alt]="course.headline"
+            [title]="course.headline"
+          />{{ course.title }}
+        </a>
+      </div>
+      <div class="col-6 pt-4">{{ course.price }}</div>
+    </div>
+  </div>
+</div>

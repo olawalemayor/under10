@@ -102,3 +102,10 @@ export interface User {
   url: string;
   url_title: string;
 }
+
+export interface UdemyResponse{
+  count: number
+  next: string
+  previous: any
+  results: Course[]
+}

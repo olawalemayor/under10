@@ -51,6 +51,7 @@ header ul {
 }
 
 #mobile-header {
+  z-index: 9999;
   float: right;
   width: 100%;
   position: fixed;

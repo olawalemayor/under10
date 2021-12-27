@@ -11,7 +11,6 @@ import { RegisterComponent } from './views/register/register.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', redirectTo: '' },
-  { path: '**', component: NoCourseComponent },
   { path: 'udemy', component: UdemyComponent },
   { path: 'pluralsight', component: NoCourseComponent },
   { path: 'udacity', component: NoCourseComponent },

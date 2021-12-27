@@ -1,0 +1,4 @@
+.view {
+  max-height: 60px;
+  overflow-y: hidden;
+}

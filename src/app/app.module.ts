@@ -11,6 +11,12 @@ import { RouterModule } from '@angular/router';
 import { NoCourseComponent } from './views/no-course/no-course.component';
 import { BrandLogoComponent } from './common/brand-logo/brand-logo.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './views/about/about.component';
+import { ImgViewComponent } from './common/img-view/img-view.component';
+import { ContactComponent } from './views/contact/contact.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +27,12 @@ import { HttpClientModule } from '@angular/common/http';
     UdemyComponent,
     NoCourseComponent,
     BrandLogoComponent,
+    AboutComponent,
+    ImgViewComponent,
+    ContactComponent,
+    ContactFormComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule, HttpClientModule],
   providers: [],

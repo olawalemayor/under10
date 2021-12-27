@@ -1,0 +1,4 @@
+.new-sec {
+  border: 2px solid var(--textCol);
+  padding: 2rem;
+}

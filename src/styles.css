@@ -6,6 +6,7 @@
 }
 
 :root {
+  --bs-body-bg: var(--bodyCol) !important;
   --primaryCol: #ff0000;
   --secondaryCol: #0000ff;
   --bodyCol: aliceblue;

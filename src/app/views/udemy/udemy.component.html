@@ -1,21 +1,326 @@
 <h2 class="display-2 text-center mb-0">UDEMY</h2>
-<div>
-  <div class="preview container">
-    <div class="row py-3 table-heading">
-      <div class="col-6">Course</div>
-      <div class="col-6">Price</div>
-    </div>
-    <div class="row pb-2 course-list" *ngFor="let course of response.results">
-      <div class="col-6">
-        <a [href]="'http://udemy.com' + course.url">
-          <img
-            [src]="course.image_125_H"
-            [alt]="course.headline"
-            [title]="course.headline"
-          />{{ course.title }}
-        </a>
+<div class="text-center text-danger pb-4">
+  Note that $10 is assumed to be ₦5000 at this time.
+</div>
+
+<!--navtab-->
+<div class="container udemy-content pb-3">
+  <!--Buttons-->
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="free-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#free"
+        type="button"
+        role="tab"
+        aria-controls="free"
+        aria-selected="true"
+        (click)="freeTab()"
+      >
+        FREE
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="business-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#business"
+        type="button"
+        role="tab"
+        aria-controls="business"
+        aria-selected="false"
+        (click)="cat0()"
+      >
+        BUSINESS
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="design-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#design"
+        type="button"
+        role="tab"
+        aria-controls="design"
+        aria-selected="false"
+        (click)="cat1()"
+      >
+        DESIGN
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="development-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#development"
+        type="button"
+        role="tab"
+        aria-controls="development"
+        aria-selected="true"
+        (click)="cat2()"
+      >
+        DEVELOPMENT
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="it-software-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#it-software"
+        type="button"
+        role="tab"
+        aria-controls="it-software"
+        aria-selected="false"
+        (click)="cat3()"
+      >
+        IT & Software
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="photography-video-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#photography-video"
+        type="button"
+        role="tab"
+        aria-controls="photography-video"
+        aria-selected="false"
+        (click)="cat4()"
+      >
+        Photography & Video
+      </button>
+    </li>
+  </ul>
+
+  <!--Tabs-->
+  <div class="tab-content" id="myTabContent">
+    <div
+      class="tab-pane fade show active"
+      id="free"
+      role="tabpanel"
+      aria-labelledby="free-tab"
+    >
+      <div>
+        <div class="preview container">
+          <div class="row">
+            <div
+              class="col-md-6 pb-2 course-list"
+              *ngFor="let course of response.results"
+            >
+              <div>
+                <a [href]="'http://udemy.com' + course.url">
+                  <div class="row">
+                    <div class="text-center col-4 border-end border-dark">
+                      <img
+                        class="w-100"
+                        [src]="course.image_125_H"
+                        [alt]="course.headline"
+                        [title]="course.headline"
+                      />
+                    </div>
+                    <div class="col-8">
+                      {{ course.title }}
+                      <div class="pt-4">{{ course.price }}</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-6 pt-4">{{ course.price }}</div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="business"
+      role="tabpanel"
+      aria-labelledby="business-tab"
+    >
+      <div class="row">
+        <div
+          class="col-md-6 pb-2 course-list"
+          *ngFor="let course of response.results"
+        >
+          <div>
+            <a [href]="'http://udemy.com' + course.url">
+              <div class="row">
+                <div class="text-center col-4 border-end border-dark">
+                  <img
+                    class="w-100"
+                    [src]="course.image_125_H"
+                    [alt]="course.headline"
+                    [title]="course.headline"
+                  />
+                </div>
+                <div class="col-8">
+                  {{ course.title }}
+                  <div class="pt-4">{{ course.price }}</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="design"
+      role="tabpanel"
+      aria-labelledby="design-tab"
+    >
+      <div>
+        <div class="preview container">
+          <div class="row">
+            <div
+              class="col-md-6 pb-2 course-list"
+              *ngFor="let course of response.results"
+            >
+              <div>
+                <a [href]="'http://udemy.com' + course.url">
+                  <div class="row">
+                    <div class="text-center col-4 border-end border-dark">
+                      <img
+                        class="w-100"
+                        [src]="course.image_125_H"
+                        [alt]="course.headline"
+                        [title]="course.headline"
+                      />
+                    </div>
+                    <div class="col-8">
+                      {{ course.title }}
+                      <div class="pt-4">{{ course.price }}</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="development"
+      role="tabpanel"
+      aria-labelledby="development-tab"
+    >
+      <div>
+        <div class="preview container">
+          <div class="row">
+            <div
+              class="col-md-6 pb-2 course-list"
+              *ngFor="let course of response.results"
+            >
+              <div>
+                <a [href]="'http://udemy.com' + course.url">
+                  <div class="row">
+                    <div class="text-center col-4 border-end border-dark">
+                      <img
+                        class="w-100"
+                        [src]="course.image_125_H"
+                        [alt]="course.headline"
+                        [title]="course.headline"
+                      />
+                    </div>
+                    <div class="col-8">
+                      {{ course.title }}
+                      <div class="pt-4">{{ course.price }}</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="it-software"
+      role="tabpanel"
+      aria-labelledby="it-software-tab"
+    >
+      <div>
+        <div class="preview container">
+          <div class="row">
+            <div
+              class="col-md-6 pb-2 course-list"
+              *ngFor="let course of response.results"
+            >
+              <div>
+                <a [href]="'http://udemy.com' + course.url">
+                  <div class="row">
+                    <div class="text-center col-4 border-end border-dark">
+                      <img
+                        class="w-100"
+                        [src]="course.image_125_H"
+                        [alt]="course.headline"
+                        [title]="course.headline"
+                      />
+                    </div>
+                    <div class="col-8">
+                      {{ course.title }}
+                      <div class="pt-4">{{ course.price }}</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="photography-video"
+      role="tabpanel"
+      aria-labelledby="photography-video-tab"
+    >
+      <div>
+        <div class="preview container">
+          <div class="row">
+            <div
+              class="col-md-6 pb-2 course-list"
+              *ngFor="let course of response.results"
+            >
+              <div>
+                <a [href]="'http://udemy.com' + course.url">
+                  <div class="row">
+                    <div class="text-center col-4 border-end border-dark">
+                      <img
+                        class="w-100"
+                        [src]="course.image_125_H"
+                        [alt]="course.headline"
+                        [title]="course.headline"
+                      />
+                    </div>
+                    <div class="col-8">
+                      {{ course.title }}
+                      <div class="pt-4">{{ course.price }}</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<!--end of navtab-->

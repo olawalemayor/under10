@@ -8,8 +8,11 @@ export interface Course {
   completion_ratio: number;
   desciption: string;
   is_paid: boolean;
+  amount: number;
   price: string;
-  price_detail: null;
+  price_detail: {
+    amount: number;
+  };
   price_serve_tracking_id: string;
   visible_instructors: VisibleInstructors[];
   image_100x100: string;
@@ -103,9 +106,9 @@ export interface User {
   url_title: string;
 }
 
-export interface UdemyResponse{
-  count: number
-  next: string
-  previous: any
-  results: Course[]
+export interface UdemyResponse {
+  count: number;
+  next: string;
+  previous: any;
+  results: Course[];
 }

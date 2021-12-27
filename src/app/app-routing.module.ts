@@ -9,7 +9,8 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'udemy', component: UdemyComponent },
   { path: 'pluralsight', component: NoCourseComponent },
   { path: 'udacity', component: NoCourseComponent },

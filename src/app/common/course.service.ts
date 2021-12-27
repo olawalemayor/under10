@@ -19,7 +19,8 @@ export class CourseService {
       'Authorization',
       'Basic YjBpcjI3YlZtdldqWms2NFd2b0hlY3VvWW5oQmZzUkZIS0tpdW52TzppSTRkWUdwSFRBN0lRU3h3OUdmeWg2WGZMQkxlaEdmdWxSbEZGbVcxVElyNjNkQk1VSEpMeVk2M2FWeUE2cE5URklMQ0puV2pJSWNhcDZ5VzNhS3BQWUlWMlREbnFyRkU0dUYxSlI5azFlR2Yxa245N1hOWFhqaWVGZGRhZ3pYTg=='
     )
-    .set('Content-Type', 'application/json;charset=utf-8');
+    .set('Content-Type', 'application/json;charset=utf-8')
+    .set('Access-Control-Allow-Origin', '*');
 
   _getNext(): Observable<UdemyResponse> {
     let headers = this.headers;

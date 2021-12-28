@@ -25,11 +25,11 @@ export class UdemyComponent implements OnInit {
   };
 
   categories: string[] = [
-    'Business',
-    'Design',
-    'Development',
-    'IT & Software',
-    'Photography & Video',
+    'business',
+    'design',
+    'development',
+    'it-software',
+    'photography',
   ];
 
   priceFilter(x: UdemyResponse) {

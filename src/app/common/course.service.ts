@@ -13,15 +13,15 @@ export class CourseService {
 
   nextRequest: string = '';
 
-  headers = new HttpHeaders()
-    .set('Accept', 'application/json, text/plain, */*')
-    .set(
-      'Authorization',
-      'Basic YjBpcjI3YlZtdldqWms2NFd2b0hlY3VvWW5oQmZzUkZIS0tpdW52TzppSTRkWUdwSFRBN0lRU3h3OUdmeWg2WGZMQkxlaEdmdWxSbEZGbVcxVElyNjNkQk1VSEpMeVk2M2FWeUE2cE5URklMQ0puV2pJSWNhcDZ5VzNhS3BQWUlWMlREbnFyRkU0dUYxSlI5azFlR2Yxa245N1hOWFhqaWVGZGRhZ3pYTg=='
-    )
-    .set('Content-Type', 'application/json;charset=utf-8')
-    .set('Access-Control-Allow-Origin', '*');
+  originUrl = 'https://udemy.com';
 
+  headers = new HttpHeaders({
+    Accept: 'application/json, text/plain, */*',
+    Authorization:
+      'Basic YjBpcjI3YlZtdldqWms2NFd2b0hlY3VvWW5oQmZzUkZIS0tpdW52TzppSTRkWUdwSFRBN0lRU3h3OUdmeWg2WGZMQkxlaEdmdWxSbEZGbVcxVElyNjNkQk1VSEpMeVk2M2FWeUE2cE5URklMQ0puV2pJSWNhcDZ5VzNhS3BQWUlWMlREbnFyRkU0dUYxSlI5azFlR2Yxa245N1hOWFhqaWVGZGRhZ3pYTg==',
+    'Content-Type': 'application/json;charset=utf-8',
+    'Access-Control-Allow-Origin': '*',
+  });
   _getNext(): Observable<UdemyResponse> {
     let headers = this.headers;
     return this._http.get<UdemyResponse>(this.nextRequest, {
@@ -31,7 +31,7 @@ export class CourseService {
 
   _getCourse(): Observable<UdemyResponse> {
     let headers = this.headers;
-    return this._http.get<UdemyResponse>('https://udemy.com/api-2.0/courses', {
+    return this._http.get<UdemyResponse>(`${this.originUrl}/api-2.0/courses`, {
       headers,
     });
   }
@@ -39,7 +39,7 @@ export class CourseService {
   _getFreeCourse(): Observable<UdemyResponse> {
     let headers = this.headers;
     return this._http.get<UdemyResponse>(
-      'https://udemy.com/api-2.0/courses/?price=price-free',
+      `${this.originUrl}/api-2.0/courses/?price=price-free`,
       {
         headers,
       }
@@ -49,7 +49,7 @@ export class CourseService {
   _getPaidCourse(): Observable<UdemyResponse> {
     let headers = this.headers;
     return this._http.get<UdemyResponse>(
-      'https://udemy.com/api-2.0/courses/?price=price-paid',
+      `${this.originUrl}/api-2.0/courses/?price=price-paid`,
       {
         headers,
       }
@@ -59,7 +59,7 @@ export class CourseService {
   _FilterAllCategory(): Observable<UdemyResponse> {
     let headers = this.headers;
     return this._http.get<UdemyResponse>(
-      `https://udemy.com/api-2.0/courses/?category=${this.courseCategory}`,
+      `${this.originUrl}/api-2.0/courses/?category=${this.courseCategory}`,
       {
         headers,
       }
@@ -69,7 +69,7 @@ export class CourseService {
   _FilterFreeCategory(): Observable<UdemyResponse> {
     let headers = this.headers;
     return this._http.get<UdemyResponse>(
-      `https://udemy.com/api-2.0/courses/?category=${this.courseCategory}&price=price-free`,
+      `${this.originUrl}/api-2.0/courses/?category=${this.courseCategory}&price=price-free`,
       {
         headers,
       }
@@ -79,7 +79,7 @@ export class CourseService {
   _FilterPaidCategory(): Observable<UdemyResponse> {
     let headers = this.headers;
     return this._http.get<UdemyResponse>(
-      `https://udemy.com/api-2.0/courses/?category=${this.courseCategory}&price=price-paid`,
+      `${this.originUrl}/api-2.0/courses/?category=${this.courseCategory}&price=price-paid`,
       {
         headers,
       }

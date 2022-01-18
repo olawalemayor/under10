@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UdemyResponse } from '../shared/udemy/course';
 
@@ -11,34 +11,38 @@ export class CourseService {
 
   courseCategory: string = '';
 
+  page = 1;
+
+  pageSize = 12;
+
   nextRequest: string = '';
 
-  originUrl = 'https://udemy.com';
+  baseURL = 'https://www.udemy.com/api-2.0/courses/';
 
-  // headers = new HttpHeaders({
-  //   Accept: 'application/json, text/plain, */*',
-  //   Authorization:
-  //     'Basic YjBpcjI3YlZtdldqWms2NFd2b0hlY3VvWW5oQmZzUkZIS0tpdW52TzppSTRkWUdwSFRBN0lRU3h3OUdmeWg2WGZMQkxlaEdmdWxSbEZGbVcxVElyNjNkQk1VSEpMeVk2M2FWeUE2cE5URklMQ0puV2pJSWNhcDZ5VzNhS3BQWUlWMlREbnFyRkU0dUYxSlI5azFlR2Yxa245N1hOWFhqaWVGZGRhZ3pYTg==',
-  //   'Content-Type': 'application/json;charset=utf-8',
-  //   'Access-Control-Allow-Origin': '*',
-  // });
-  // _getNext(): Observable<UdemyResponse> {
-  //   let headers = this.headers;
-  //   return this._http.get<UdemyResponse>(this.nextRequest, {
-  //     headers,
-  //   });
-  // }
+  header = new HttpHeaders({
+    Accept: 'application/json, text/plain, */*',
+    Authorization:
+      'Basic YjBpcjI3YlZtdldqWms2NFd2b0hlY3VvWW5oQmZzUkZIS0tpdW52TzppSTRkWUdwSFRBN0lRU3h3OUdmeWg2WGZMQkxlaEdmdWxSbEZGbVcxVElyNjNkQk1VSEpMeVk2M2FWeUE2cE5URklMQ0puV2pJSWNhcDZ5VzNhS3BQWUlWMlREbnFyRkU0dUYxSlI5azFlR2Yxa245N1hOWFhqaWVGZGRhZ3pYTg==',
+  }).set('content-type', 'application/json');
 
-  // _getCourse(): Observable<UdemyResponse> {
-  //   let headers = this.headers;
-  //   return this._http.get<UdemyResponse>(`${this.originUrl}/api-2.0/courses`, {
-  //     headers,
-  //   });
-  // }
+  reqOptions = {
+    headers: this.header,
+    resoponseType: 'json',
+    withCredentials: true,
+  };
+
+  _getCourse(): Observable<UdemyResponse> {
+    return this._http.get<UdemyResponse>(
+      `${this.baseURL}/api-2.0/courses`,
+      this.reqOptions
+    );
+  }
 
   _getFreeCourse(): Observable<UdemyResponse> {
-    //let headers = this.headers;
-    return this._http.get<UdemyResponse>(`../../assets/temp/free.json`, {});
+    return this._http.get<UdemyResponse>(
+      this.baseURL + `?price=price-free`,
+      this.reqOptions
+    );
   }
 
   // _getPaidCourse(): Observable<UdemyResponse> {
@@ -59,10 +63,10 @@ export class CourseService {
   // }
 
   _FilterPaidCategory(): Observable<UdemyResponse> {
-    //let headers = this.headers;
     return this._http.get<UdemyResponse>(
-      `../../assets/temp/${this.courseCategory}.json`,
-      {}
+      this.baseURL +
+        `?category=${this.courseCategory}&page=${this.page}&page_size=${this.pageSize}&price=price-paid`,
+      this.reqOptions
     );
   }
 }

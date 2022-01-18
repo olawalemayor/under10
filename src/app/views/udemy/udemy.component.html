@@ -118,8 +118,8 @@
             <div
               class="col-md-6 pb-2 course-list"
               *ngFor="let course of response.results"
-            >
-              <div>
+            >            
+            <div *ngIf="course">
                 <a [href]="'http://udemy.com' + course.url">
                   <div class="row">
                     <div class="text-center col-4 border-end border-dark">
@@ -152,8 +152,8 @@
         <div
           class="col-md-6 pb-2 course-list"
           *ngFor="let course of response.results"
-        >
-          <div>
+        >        
+        <div *ngIf="course">
             <a [href]="'http://udemy.com' + course.url">
               <div class="row">
                 <div class="text-center col-4 border-end border-dark">
@@ -186,8 +186,8 @@
             <div
               class="col-md-6 pb-2 course-list"
               *ngFor="let course of response.results"
-            >
-              <div>
+            >            
+            <div *ngIf="course">
                 <a [href]="'http://udemy.com' + course.url">
                   <div class="row">
                     <div class="text-center col-4 border-end border-dark">
@@ -223,8 +223,8 @@
             <div
               class="col-md-6 pb-2 course-list"
               *ngFor="let course of response.results"
-            >
-              <div>
+            >            
+            <div *ngIf="course">
                 <a [href]="'http://udemy.com' + course.url">
                   <div class="row">
                     <div class="text-center col-4 border-end border-dark">
@@ -260,8 +260,8 @@
             <div
               class="col-md-6 pb-2 course-list"
               *ngFor="let course of response.results"
-            >
-              <div>
+            >            
+            <div *ngIf="course">
                 <a [href]="'http://udemy.com' + course.url">
                   <div class="row">
                     <div class="text-center col-4 border-end border-dark">
@@ -297,8 +297,8 @@
             <div
               class="col-md-6 pb-2 course-list"
               *ngFor="let course of response.results"
-            >
-              <div>
+            >            
+            <div *ngIf="course">
                 <a [href]="'http://udemy.com' + course.url">
                   <div class="row">
                     <div class="text-center col-4 border-end border-dark">

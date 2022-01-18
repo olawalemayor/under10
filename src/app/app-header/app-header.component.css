@@ -1,7 +1,9 @@
 header {
   background-color: var(--bodyCol);
+  border-bottom: 0.3px solid rgba(0, 0, 0, 0.1);
   z-index: 9999;
   top: 0;
+  margin-bottom: 15px;
 }
 
 .scroll-header {

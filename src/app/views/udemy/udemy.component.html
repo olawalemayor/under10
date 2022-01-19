@@ -116,10 +116,18 @@
         <div class="preview container">
           <div class="row">
             <div
+              *ngIf="response.results.length < 1 || !response.results"
+              class="display-6 py-5 text-center"
+            >
+              No courses yet!<br />
+              The category of courses you are looking for might not match the
+              criteria we are displaying
+            </div>
+            <div
               class="col-md-6 pb-2 course-list"
               *ngFor="let course of response.results"
-            >            
-            <div *ngIf="course">
+            >
+              <div *ngIf="course">
                 <a [href]="'http://udemy.com' + course.url">
                   <div class="row">
                     <div class="text-center col-4 border-end border-dark">
@@ -150,10 +158,18 @@
     >
       <div class="row">
         <div
+          *ngIf="response.results.length < 1 || !response.results"
+          class="display-6 py-5 text-center"
+        >
+          No courses yet!<br />
+          The category of courses you are looking for might not match the
+          criteria we are displaying
+        </div>
+        <div
           class="col-md-6 pb-2 course-list"
           *ngFor="let course of response.results"
-        >        
-        <div *ngIf="course">
+        >
+          <div *ngIf="course">
             <a [href]="'http://udemy.com' + course.url">
               <div class="row">
                 <div class="text-center col-4 border-end border-dark">
@@ -184,10 +200,18 @@
         <div class="preview container">
           <div class="row">
             <div
+              *ngIf="response.results.length < 1 || !response.results"
+              class="display-6 py-5 text-center"
+            >
+              No courses yet!<br />
+              The category of courses you are looking for might not match the
+              criteria we are displaying
+            </div>
+            <div
               class="col-md-6 pb-2 course-list"
               *ngFor="let course of response.results"
-            >            
-            <div *ngIf="course">
+            >
+              <div *ngIf="course">
                 <a [href]="'http://udemy.com' + course.url">
                   <div class="row">
                     <div class="text-center col-4 border-end border-dark">
@@ -221,10 +245,18 @@
         <div class="preview container">
           <div class="row">
             <div
+              *ngIf="response.results.length < 1 || !response.results"
+              class="display-6 py-5 text-center"
+            >
+              No courses yet!<br />
+              The category of courses you are looking for might not match the
+              criteria we are displaying
+            </div>
+            <div
               class="col-md-6 pb-2 course-list"
               *ngFor="let course of response.results"
-            >            
-            <div *ngIf="course">
+            >
+              <div *ngIf="course">
                 <a [href]="'http://udemy.com' + course.url">
                   <div class="row">
                     <div class="text-center col-4 border-end border-dark">
@@ -258,10 +290,18 @@
         <div class="preview container">
           <div class="row">
             <div
+              *ngIf="response.results.length < 1 || !response.results"
+              class="display-6 py-5 text-center"
+            >
+              No courses yet!<br />
+              The category of courses you are looking for might not match the
+              criteria we are displaying
+            </div>
+            <div
               class="col-md-6 pb-2 course-list"
               *ngFor="let course of response.results"
-            >            
-            <div *ngIf="course">
+            >
+              <div *ngIf="course">
                 <a [href]="'http://udemy.com' + course.url">
                   <div class="row">
                     <div class="text-center col-4 border-end border-dark">
@@ -295,10 +335,18 @@
         <div class="preview container">
           <div class="row">
             <div
+              *ngIf="response.results.length < 1 || !response.results"
+              class="display-6 py-5 text-center"
+            >
+              No courses yet!<br />
+              The category of courses you are looking for might not match the
+              criteria we are displaying
+            </div>
+            <div
               class="col-md-6 pb-2 course-list"
               *ngFor="let course of response.results"
-            >            
-            <div *ngIf="course">
+            >
+              <div *ngIf="course">
                 <a [href]="'http://udemy.com' + course.url">
                   <div class="row">
                     <div class="text-center col-4 border-end border-dark">

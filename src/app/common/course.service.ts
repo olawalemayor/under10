@@ -18,7 +18,7 @@ export class CourseService {
   nextRequest: string = '';
 
   //baseURL = 'https://www.udemy.com/api-2.0/courses/';
-  baseURL = 'http://demo3793272.mockable.io';
+  baseURL = 'https://demo3793272.mockable.io';
 
   header = new HttpHeaders({
     Accept: 'application/json, text/plain, */*',

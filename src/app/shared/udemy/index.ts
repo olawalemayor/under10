@@ -1,1 +1,1 @@
-export * from './course';
+export * from '../../interfaces/course.interface';

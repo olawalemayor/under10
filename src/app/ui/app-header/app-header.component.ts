@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../shared/AuthService/user.service';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-header.component.css'],
 })
 export class AppHeaderComponent implements OnInit {
-  constructor() {}
+  constructor(private userService: UserService) {}
+
+  isAuthenticated() {
+    return this.userService.isAuthenticated;
+  }
+  userName() {
+    return this.userService.username;
+  }
+
+  logOut() {
+    return this.userService.logOut();
+  }
 
   ngOnInit(): void {
     let navButton = document.getElementById('mobile-menu') as HTMLButtonElement;

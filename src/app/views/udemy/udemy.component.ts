@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../../common/course.service';
-import { UdemyResponse } from '../../shared/udemy/course';
+import { UdemyResponse } from '../../interfaces/course.interface';
 
 @Component({
   selector: 'app-udemy',

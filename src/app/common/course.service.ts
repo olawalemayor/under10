@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { UdemyResponse } from '../shared/udemy/course';
+import { UdemyResponse } from '../interfaces/course.interface';
 
 @Injectable({
   providedIn: 'root',

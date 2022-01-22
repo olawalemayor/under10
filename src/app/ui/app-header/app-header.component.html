@@ -4,13 +4,46 @@
       <site-logo></site-logo>
       <div class="navigations">
         <ul>
-          <li><a href="">Blog</a></li>
-          <li *ngIf="isAuthenticated()">
-            <a [routerLink]="['profile']">Profile</a>
+          <li>
+            <a
+              routerLink="/"
+              routerLinkActive="link-active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Blog</a
+            >
           </li>
-          <li><a [routerLink]="['about-us']">About Us</a></li>
-          <li><a [routerLink]="['udemy']">Courses</a></li>
-          <li><a [routerLink]="['contact-us']">Contact us</a></li>
+          <li *ngIf="isAuthenticated()">
+            <a
+              routerLink="profile"
+              routerLinkActive="link-active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Profile</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="about-us"
+              routerLinkActive="link-active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="udemy"
+              routerLinkActive="link-active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Courses</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="contact-us"
+              routerLinkActive="link-active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Contact us</a
+            >
+          </li>
         </ul>
       </div>
       <div *ngIf="isAuthenticated()">
@@ -22,14 +55,14 @@
           href=""
           class="btn btn-secondary me-1"
           id="login-btn"
-          [routerLink]="['login']"
+          routerLink="login"
           >Log in</a
         >
         <a
           href=""
           class="btn btn-secondary ms-1"
           id="signup-btn"
-          [routerLink]="['register']"
+          routerLink="register"
           >Sign Up</a
         >
       </div>
@@ -41,20 +74,53 @@
       <div id="mobile-header" class="">
         <div class="mob-nav">
           <ul>
-            <li><a href="">Blog</a></li>
-            <li *ngIf="isAuthenticated()">
-              <a [routerLink]="['profile']">Profile</a>
+            <li>
+              <a
+                routerLink="/"
+                routerLinkActive="link-active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Blog</a
+              >
             </li>
-            <li><a [routerLink]="['about-us']">About Us</a></li>
-            <li><a [routerLink]="['udemy']">Courses</a></li>
-            <li><a [routerLink]="['contact-us']">Contact us</a></li>
+            <li *ngIf="isAuthenticated()">
+              <a
+                routerLink="profile"
+                routerLinkActive="link-active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Profile</a
+              >
+            </li>
+            <li>
+              <a
+                routerLink="about-us"
+                routerLinkActive="link-active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                routerLink="udemy"
+                routerLinkActive="link-active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Courses</a
+              >
+            </li>
+            <li>
+              <a
+                routerLink="contact-us"
+                routerLinkActive="link-active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Contact us</a
+              >
+            </li>
           </ul>
         </div>
         <div class="mob-header-actions">
-          <a href="" class="btn" id="mob-login-btn" [routerLink]="['login']"
+          <a href="" class="btn" id="mob-login-btn" routerLink="login"
             >Log in</a
           >
-          <a href="" class="btn" id="mob-signup-btn" [routerLink]="['register']"
+          <a href="" class="btn" id="mob-signup-btn" routerLink="register"
             >Sign Up</a
           >
         </div>

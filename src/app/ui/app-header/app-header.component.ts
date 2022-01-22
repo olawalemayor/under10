@@ -9,6 +9,8 @@ import { UserService } from '../../shared/AuthService/user.service';
 export class AppHeaderComponent implements OnInit {
   constructor(private userService: UserService) {}
 
+  activeClass = '.link-active';
+
   isAuthenticated() {
     return this.userService.isAuthenticated;
   }

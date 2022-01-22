@@ -110,6 +110,10 @@ header ul {
   color: var(--bodyCol) !important;
 }
 
+.mob-nav ul > li > .link-active {
+  color: var(--primaryCol) !important;
+}
+
 .mob-nav,
 .mob-nav > ul,
 .mob-nav li {
@@ -128,6 +132,10 @@ header ul {
 
 .navigations a:hover {
   color: var(--primaryCol);
+}
+
+.link-active {
+  color: var(--primaryCol) !important;
 }
 
 header a {

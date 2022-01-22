@@ -6,15 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
-
   cards: string[][] = [
     ['UDEMY', 'Cheap courses from Udemy', 'udemy'],
     ['PLURALSIGHT', 'Cheap courses from Pluralsight', 'pluralsight'],
     ['UDACITY', 'Cheap courses from Udacity', 'udacity'],
   ];
-
-  courseRoute() {}
 
   ngOnInit(): void {}
 }

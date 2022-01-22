@@ -7,8 +7,7 @@ import { AboutComponent } from '../views/about/about.component';
 import { ContactComponent } from '../views/contact/contact.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', redirectTo: '' },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'udemy', component: UdemyComponent },
   { path: 'pluralsight', component: NoCourseComponent },
   { path: 'udacity', component: NoCourseComponent },

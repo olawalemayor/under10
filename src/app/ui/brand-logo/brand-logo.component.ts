@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'site-logo',
-  template: `<a href="/"
+  template: `<a routerLink="/"
     ><div id="logo">Under <span>10</span> Bucks</div></a
   >`,
   styles: [

@@ -33,7 +33,10 @@ export class UdemyComponent implements OnInit {
   ];
 
   priceFilter(x: UdemyResponse) {
-    return x.results.filter((course) => course.price_detail.amount <= 5000);
+    let newResult = x.results.filter(
+      (course) => course.price_detail.amount <= 5000
+    );
+    return newResult;
   }
 
   cat0() {

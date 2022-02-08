@@ -6,7 +6,7 @@ const ngApp = express();
 ngApp.use(express.static("./dist/LatestNews"));
 
 ngApp.get("/*", function (request, response) {
-  response.sendFile(path.join(__dirname, "/dist/LatestNews/index.html"));
+  response.sendFile(path.join(__dirname, "/dist/under10bucks/index.html"));
 });
 
 ngApp.listen(process.env.PORT || 8080);
